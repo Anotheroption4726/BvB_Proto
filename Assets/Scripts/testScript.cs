@@ -13,13 +13,15 @@ public class testScript : MonoBehaviour
 
     void Start()
     {
-        Quaternion cubeRotation = Quaternion.Euler(0, 30, 0);
-        rb.rotation = cubeRotation;
+        //  Quaternion cubeRotation = Quaternion.Euler(0, 30, 0);
+        //  rb.rotation = cubeRotation;
     }
 
     void Update()
     {   
-        //  rb.velocity = new Vector3(-2.0f, 0.0f, 0.0f);
-        rb.velocity = Vector3.forward * Time.deltaTime;
+        //  rb.velocity = new Vector3(0.0f, 0.0f, 2.0f);
+        rb.velocity = transform.TransformDirection(new Vector3(0, 0, 2.0f));
+
+        //  rb.velocity = Vector3.forward * Time.deltaTime;
     }
 }
